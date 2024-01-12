@@ -3,6 +3,8 @@ import styles from './Home.module.css';
 import styled from 'styled-components'
 import x from './Vector (2).svg';
 import o from './Vector (3).svg';
+import ximg from './choicex.svg';
+import oimg from './choiceo.svg';
 import retry from './pajamas_retry.svg';
 import { Button } from '@mui/material';
 import { useLocation } from 'react-router-dom';
@@ -63,7 +65,7 @@ export default function Checklist2(props) {
       data[num] = selectedChoice;
     
       setCount((prevCount) => prevCount + 1);
-      e.target.innerHTML = `<img src='${selectedChoice === 'x' ? x : o}'>`;
+      e.target.innerHTML = `<img src='${selectedChoice === 'x' ? ximg : oimg}'>`;
       setBoard([...data]);
     }
   };
@@ -88,7 +90,7 @@ export default function Checklist2(props) {
     setCount((prevCount) => prevCount + 1);
 
     const boxes = document.getElementsByClassName(styles.boxes);
-    boxes[chosenIndex].innerHTML = `<img src='${pcChoice === 'x' ? x : o}'>`;
+    boxes[chosenIndex].innerHTML = `<img src='${pcChoice === 'x' ? ximg : oimg}'>`;
     setBoard([...data]);
     checkwin(data);
   };
