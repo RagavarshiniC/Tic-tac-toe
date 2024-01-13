@@ -109,7 +109,7 @@ function Home() {
         </div>
         </div>
         <Link to= "/checklist2" state={{from:selectedChoice}} style={{ textDecoration: 'none',color:"black" }}>
-        <div onClick={() => {resetGameAndScores}}
+        <div
         style={{
           display: 'flex',
           justifyContent: 'center',
